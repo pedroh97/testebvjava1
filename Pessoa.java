@@ -1,8 +1,8 @@
 public class Pessoa {
 
     private int idade;
-    private static String nome;
-    private static char sexo;
+    private String nome;
+    private char sexo;
 
     public int getIdade(){
         return idade;
@@ -30,22 +30,22 @@ public class Pessoa {
     
     }
 
-    public Pessoa(int idade,String nome,char sexo){
+    public Pessoa(int idade, String nome,char sexo){
+
+        
+        this.idade = idade;
+        this.nome = nome;
+        this.sexo = sexo;
+
         
     } 
 
-
-    public void idade() {
-        idade = 3;
-    }
-
-    public void nome() {
-        nome = "Pedro";
-    }
     
-    public void sexo() {
-        sexo = 'M';
-    }
+
+    @Override
+    public String toString() { 
+        return String.format("Nome :    "+nome +"\nIdade:    "+ idade +"\nSexo:     "+  sexo);
+    } 
 
 
 }
